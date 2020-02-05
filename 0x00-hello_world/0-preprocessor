@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $CFILE > c
+cat $CFILE > c

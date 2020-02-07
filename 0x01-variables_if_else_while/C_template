@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+/*documentation goes here*/
+
+int main(void)
+{
+	/* Code goes here */
+
+
+	return (0);
+}

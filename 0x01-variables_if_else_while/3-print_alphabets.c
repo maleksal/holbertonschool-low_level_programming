@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <ctype.h>
 
 /**
   * main - entry function
@@ -9,22 +8,15 @@
 int main(void)
 {
 	char c;
-	int count;
 
-	count = 0;
-	do {
-		for (c = 'A'; c <= 'Z'; c++)
-		{
-			if (count >= 26)
-			{
-				putchar(c);
-				count += 1;
-			} else
-				putchar(tolower(c));
-				count += 1;
-		}
-
-	} while (count < 52);
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		putchar(c);
+	}
+	for (c = 'A'; c <= 'Z'; c++)
+	{
+		putchar(c);
+	}
 	putchar('\n');
 	return (0);
 }

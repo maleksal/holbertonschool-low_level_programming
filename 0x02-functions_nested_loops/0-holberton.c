@@ -1,4 +1,4 @@
-#include "_putchar.c"
+#include "holberton.h"
 
 /**
   * main - function prints a string

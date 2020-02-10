@@ -1,6 +1,13 @@
 #include "holberton.h"
+
 /**
-  * print_alphabet - function prints lowercase alphabets
+  *  print_alphabet - function prints lowercase alphabets
+  *  -----------------
+  *
+  *  @void: no parameter
+  *
+  *  Retrun: implicit return
+  *
   */
 
 

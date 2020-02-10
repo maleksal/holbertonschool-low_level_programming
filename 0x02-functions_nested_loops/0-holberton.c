@@ -1,9 +1,14 @@
 #include "holberton.h"
 
 /**
-  * main - function prints a string
+  * main - prints a string
+  * ----------------------
+  *
+  * @void: no parameter
+  *
   * Return: 0
-  */
+  *
+ **/
 
 int main(void)
 {

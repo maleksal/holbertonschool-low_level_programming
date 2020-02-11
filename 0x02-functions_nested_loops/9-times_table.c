@@ -10,50 +10,37 @@
   *
  **/
 
+
 void times_table(void)
 {
-	int arrayD[] = {0,1,2,3,4,5,6,7,8,9};
-	int index, counter;
-	int multi = 0;
-	int calculate;
+	int counter1, counter2;
+	int calcul;
 
-	counter = 0;
-	while (counter <= 9)
+	for (counter1 = 0; counter1 < 10; counter1++)
 	{
-		for (index = 0; index <= 9; index++)
+		for (counter2 = 0; counter2 < 10; counter2++)
 		{
-			calculate = arrayD[index] * multi;
+			calcul = counter1 * counter2;
 			
-			if (calculate > 9)
+			
+			if (calcul <= 9)
 			{
-				if (index != 9)
+				if (counter2 != 0)
 				{
-					_putchar(calculate / 10 + '0');
-					_putchar(calculate % 10 + '0');
 					_putchar(',');
 					_putchar(' ');
-				} else 
-				{
-					_putchar(calculate / 10 + '0');
-					_putchar(calculate % 10 + '0');
+					_putchar(' ');
 				}
+				_putchar(calcul + '0');
 			} else
 			{
-				if (index != 9)
-				{
-					_putchar(calculate + '0');
 					_putchar(',');
 					_putchar(' ');
-					_putchar(' ');
-				} else
-				{
-					_putchar(calculate + '0');
-				}
+					_putchar(calcul / 10 + '0');
+					_putchar(calcul % 10 + '0');
 			}
+
 		}
 		_putchar('\n');
-		counter++;
-		multi++;
-
 	}
 }

@@ -16,7 +16,7 @@ int main(void)
 	int index, array_size;
 
 	array_size = sizeof(char_array) / sizeof(char);
-	for (index = 0; index < array_size; index++)
+	for (index = 0; index != array_size; index++)
 	{
 		_putchar(char_array[index]);
 	}

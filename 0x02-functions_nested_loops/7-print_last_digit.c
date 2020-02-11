@@ -17,10 +17,10 @@ int print_last_digit(int digit)
 
 	if (lastD >= 0)
 	{
-		_putchar(lastD);
+		_putchar(lastD + '0');
 		return (lastD);
 
 	}
-	_putchar(lastD * -1);
+	_putchar(lastD * -1 + '0');
 	return (lastD * -1);
 }

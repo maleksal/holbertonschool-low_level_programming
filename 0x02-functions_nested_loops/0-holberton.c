@@ -12,7 +12,7 @@
 
 int main(void)
 {
-	char char_array[] = "Holberton ";
+	char char_array[] = "Holberton";
 	int index, array_size;
 
 	array_size = sizeof(char_array) / sizeof(char);

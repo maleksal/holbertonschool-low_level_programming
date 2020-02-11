@@ -1,12 +1,12 @@
 #include "holberton.h"
 
 /**
-  * function name - function description
+  * jack_bauer - print time from 00:00 to 23:59
   *  ------------------
   *
-  *  @param: parameter of the funcrion
+  *  @void: no param
   *
-  *  Return: return value of the function
+  *  Return: implicit return
   *
  **/
 
@@ -15,11 +15,11 @@ void jack_bauer(void)
 	int hour = 0;
 	int minute = 0;
 
-	for (;hour <= 23;)
+	for (; hour <= 23; )
 	{
-		for (;minute <= 59; minute++)
+		for (; minute <= 59; minute++)
 		{
-			_putchar((hour / 10) +'0');
+			_putchar((hour / 10) + '0');
 			_putchar((hour % 10) + '0');
 			_putchar(':');
 			_putchar((minute / 10) + '0');
@@ -27,6 +27,6 @@ void jack_bauer(void)
 			_putchar('\n');
 		}
 		minute = 0;
-		hour ++;
+		hour++;
 	}
 }

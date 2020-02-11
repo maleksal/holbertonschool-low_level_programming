@@ -1,12 +1,12 @@
 #include "holberton.h"
 
 /**
-  * function name - function description
+  *  times_table - print table
   *  ------------------
   *
-  *  @param: parameter of the funcrion
+  *  @void: no param
   *
-  *  Return: return value of the function
+  *  Return: implicit return
   *
  **/
 
@@ -21,8 +21,6 @@ void times_table(void)
 		for (counter2 = 0; counter2 < 10; counter2++)
 		{
 			calcul = counter1 * counter2;
-			
-			
 			if (calcul <= 9)
 			{
 				if (counter2 != 0)

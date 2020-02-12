@@ -28,11 +28,13 @@ void print_times_table(int n)
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
+					_putchar(' ');
 				}
 				_putchar(calcul + '0');
 			} else
 			{
 					_putchar(',');
+					_putchar(' ');
 					_putchar(' ');
 					_putchar(calcul / 10 + '0');
 					_putchar(calcul % 10 + '0');

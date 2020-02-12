@@ -1,4 +1,3 @@
-#include "holberton.h"
 #include <stdio.h>
 
 /**
@@ -24,6 +23,6 @@ int main(void)
 		}
 	}
 	printf("%d\n", sum);
-	retrun (0);
+	return (0);
 }
 

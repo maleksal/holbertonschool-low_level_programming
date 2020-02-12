@@ -1,5 +1,4 @@
 #include "holberon.h"
-#include <stdio.h>
 
 /**
   * main - test func

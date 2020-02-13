@@ -38,7 +38,7 @@ void more_numbers(void)
 {
 	int b = 0;
 
-	for (; b <= 10; b++)
+	for (; b < 10; b++)
 	{
 		numbers();
 		_putchar('\n');

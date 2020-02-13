@@ -30,12 +30,13 @@ void print_diagonal(int n)
 	if (n <= 0)
 	{
 		_putchar('\n');
-		return;
-	}
-	for (i = 1; i < n + 1; i++)
+	} else
 	{
-		manage_spaces(i);
-		_putchar('\\');
-		_putchar('\n');
+		for (i = 1; i < n + 1; i++)
+		{
+			manage_spaces(i);
+			_putchar('\\');
+			_putchar('\n');
+		}
 	}
 }

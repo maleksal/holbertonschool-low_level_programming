@@ -1,29 +1,46 @@
 #include "holberton.h"
 
 /**
+  * numbers - print nums
+  * --------------------
+  * @void: void
+  *
+  * Return: implicit return
+  */
+
+void numbers(void)
+{
+	int i;
+
+	for (; i <= 14; i++)
+	{
+		if (i < 9)
+		{
+			_putchar(i + '0');
+		} else
+		{
+			_putchar((i / 10) + '0');
+			_putchar((i % 10) + '0');
+		}
+	}
+}
+
+/**
   *  more_numbers - print nth times numbers
   *  --------------------------------------
-  *
   *  @void: void
   *
   *  Return: implicit return
   *
- **/
+  */
 
 void more_numbers(void)
 {
-	int i = 0;
-	int counter = 0;
+	int b = 0;
 
-	while (counter != 14)
+	for (; b <= 10; b++)
 	{
-		for (; i <= 14; i++)
-		{
-			_putchar(i + '0');
-		}
+		numbers();
 		_putchar('\n');
-		counter++
 	}
-	_putchar('\n');
 }
-

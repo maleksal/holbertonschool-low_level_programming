@@ -1,34 +1,49 @@
 #include <stdio.h>
 
 /**
-  *  main - print numbers 1 - 100
+  *  conditions - handle cond if else
   *  ----------------------------
-  *
-  *  Return: return value of the function
+  *  @i: takes an int
+  *  Return: None
  **/
 
+
+void conditions(int i)
+{
+	if (i % 3 == 0 && i % 5 == 0)
+	{
+		printf("FizzBuzz");
+	}
+	else if (i % 5 == 0)
+	{
+		printf("Buzz");
+	}
+	else if (i % 3 == 0)
+	{
+		printf("Fizz");
+	}
+	else
+	{
+		printf("%d ", i);
+	}
+}
+
+/**
+  * main - print numbers 1 - 100
+  *
+  * Return: 0
+  */
 
 int main(void)
 {
 	int i;
 
-	for (i = 1; i <= 100; i++)
+	for (i = 0; i <= 100; i++)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
+		conditions(i);
+		if (i < 100)
 		{
-			printf("FizzBuzz ");
-		}
-		else if (i % 5 == 0)
-		{
-			printf("Buzz ");
-		}
-		else if (i % 3 == 0)
-		{
-			printf("Fizz ");
-		}
-		else
-		{
-			printf("%d ", i);
+			putchar(' ');
 		}
 	}
 	putchar('\n');

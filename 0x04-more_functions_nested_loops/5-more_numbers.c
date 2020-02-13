@@ -12,7 +12,7 @@ void numbers(void)
 {
 	int i = 0;
 
-	for (; i < 14; i++)
+	for (; i <= 14; i++)
 	{
 		if (i <= 9)
 		{

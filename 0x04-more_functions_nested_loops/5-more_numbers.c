@@ -14,7 +14,7 @@ void numbers(void)
 
 	for (; i <= 14; i++)
 	{
-		if (i < 9)
+		if (i <= 9)
 		{
 			_putchar(i + '0');
 		} else

@@ -1,7 +1,8 @@
-#include <stdio.h>
+#include "holberton.h"
 
 /**
- * main - assign a value to a pointer variable
+ * reset_to_98 - assign a value to a pointer variable
+ * @n: pointer variable
  * Return: void
  */
 

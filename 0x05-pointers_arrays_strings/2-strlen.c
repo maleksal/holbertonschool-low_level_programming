@@ -15,3 +15,4 @@ int _strlen(char *s)
 		counter++;
 	}
 	return (counter);
+}

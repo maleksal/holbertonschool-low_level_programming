@@ -29,7 +29,7 @@ void print_rev(char *s)
 {
 	int i;
 
-	for (i = len_str(s); i > 0; i--)
+	for (i = len_str(s); i >= 0; i--)
 	{
 		_putchar(s[i]);
 	}

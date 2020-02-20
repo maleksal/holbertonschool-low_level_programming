@@ -2,6 +2,7 @@
 
 /**
   * string_toupper - convert string from lower to upper
+  * @str: char array
   * Return: char converted
   */
 
@@ -14,8 +15,7 @@ char *string_toupper(char *str)
 	{
 		if (str[index] >= 'a' && str[index] <= 'z')
 		{
-			str[index] = str[index] - 32;
-	
+			str[index] = str[index] - 32;	
 		}
 	}
 	return (str);

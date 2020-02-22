@@ -14,10 +14,10 @@ char *rot13(char *c)
 	{
 		for ( ; (c[i] >= 'A' && c[i] <= 'Z') || (c[i] >= 'a' && c[i] <= 'z'); )
 		{
-			if ((c[i] >= 'n') || (c[i] > 'N'))
+			if ((c[i] >= 'n' && c[i] <= 'z') || (c[i] >= 'N' && c[i] <= 'Z'))
 			{
-			c[i] = *(c + i) - 13;
-			break;
+				c[i] = *(c + i) - 13;
+				break;
 			}
 			c[i] = *(c + i) + 13;
 			break;

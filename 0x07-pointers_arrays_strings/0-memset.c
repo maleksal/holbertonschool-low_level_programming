@@ -5,6 +5,7 @@
   * @s: char type
   * @b: char type
   * @n: unsigned int var addr
+  * Return: pointer to s
   */
 
 char *_memset(char *s, char b, unsigned int n)
@@ -13,7 +14,7 @@ char *_memset(char *s, char b, unsigned int n)
 
 	while (i < n)
 	{
-		*(s+i) = b;
+		*(s + i) = b;
 		i++;
 	}
 	return (s);

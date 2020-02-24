@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
  * _strchr - locates a char in a string
  * @s: type char
@@ -18,5 +18,5 @@ char *_strchr(char *s, char c)
 			return (&s[i]);
 		}
 	}
-	return ('\0');
+	return (NULL);
 }

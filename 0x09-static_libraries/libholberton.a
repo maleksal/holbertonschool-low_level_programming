@@ -1,0 +1,114 @@
+!<arch>
+file-11.c/      1582994645  1000  1000  100664  51        `
+
+	#include "holberton.h"
+	
+	void _puts(char *s){}
+	
+file-20.c/      1582994645  1000  1000  100664  78        `
+
+	#include "holberton.h"
+	
+	char *_memset(char *s, char b, unsigned int n){}
+	file-23.c/      1582994645  1000  1000  100664  151       `
+
+	#include "holberton.h"
+	
+	char *_strncat(char *dest, char *src, int n){}
+	
+	#include "holberton.h"
+	
+	unsigned int _strspn(char *s, char *accept){}
+	
+file-26.c/      1582994645  1000  1000  100664  47        `
+
+	#include "holberton.h"
+	
+	int _abs(int n){}
+	
+file-29.c/      1582994645  1000  1000  100664  119       `
+
+	#include "holberton.h"
+	
+	int _isdigit(int c){}
+	
+	#include "holberton.h"
+	
+	char *_strcat(char *dest, char *src){}
+	
+file-3.c/       1582994645  1000  1000  100664  68        `
+
+	#include "holberton.h"
+	
+	char *_strcpy(char *dest, char *src){}
+	file-30.c/      1582994645  1000  1000  100664  52        `
+
+	#include "holberton.h"
+	
+	int _putchar(char c){}
+	file-32.c/      1582994645  1000  1000  100664  52        `
+
+	#include "holberton.h"
+	
+	int _strlen(char *s){}
+	file-33.c/      1582994645  1000  1000  100664  51        `
+
+	#include "holberton.h"
+	
+	int _isalpha(int c){}
+	
+file-4.c/       1582994645  1000  1000  100664  50        `
+
+	#include "holberton.h"
+	
+	int _atoi(char *s){}
+	file-41.c/      1582994645  1000  1000  100664  51        `
+
+	#include "holberton.h"
+	
+	int _islower(int c){}
+	
+file-47.c/      1582994645  1000  1000  100664  135       `
+
+	#include "holberton.h"
+	
+	int _isupper(int c){}
+	
+	#include "holberton.h"
+	
+	char *_memcpy(char *dest, char *src, unsigned int n){}
+	
+file-48.c/      1582994645  1000  1000  100664  62        `
+
+	#include "holberton.h"
+	
+	char *_strchr(char *s, char c){}
+	file-49.c/      1582994645  1000  1000  100664  69        `
+
+	#include "holberton.h"
+	
+	char *_strpbrk(char *s, char *accept){}
+	
+file-5.c/       1582994645  1000  1000  100664  32        `
+
+	#include "holberton.h"
+	
+	{}
+	file-6.c/       1582994645  1000  1000  100664  63        `
+
+	#include "holberton.h"
+	
+	int _strcmp(char *s1, char *s2){}
+	
+file-8.c/       1582994645  1000  1000  100664  75        `
+
+	#include "holberton.h"
+	
+	char *_strstr(char *haystack, char *needle){}
+	
+file-9.c/       1582994645  1000  1000  100664  76        `
+
+	#include "holberton.h"
+	
+	char *_strncpy(char *dest, char *src, int n){}
+	

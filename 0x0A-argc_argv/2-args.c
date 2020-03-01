@@ -3,13 +3,13 @@
 /**
   * main - print cmd args
   * @argc: size of argv
-  * @agrv: arr
+  * @argv: arr
   * Return: int
   */
 
 int main(int argc, char *argv[])
 {
-	int i,j;
+	int i, j;
 
 	for (i = 0; i < argc; i++)
 	{
@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 		{
 			_putchar(argv[i][j]);
 		}
-	
+
 		_putchar('\n');
 	}
 	return (0);

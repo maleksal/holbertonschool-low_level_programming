@@ -60,9 +60,9 @@ void print_number(int n)
 
 int main(int argc, char *argv[])
 {
-	int i;
+	int i, j;
 	char error[] = "Error";
-	int add;
+	int add = 0;
 
 	(void)add;
 	if (argc - 1 <= 1)
@@ -73,19 +73,24 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		if (convert_int(argv[1]) != 0 && convert_int(argv[2]) != 0)
+		for (i = 1; i < argc; i++)
 		{
-			add = convert_int(argv[1]) + convert_int(argv[2]);
-			print_number(add);
-			_putchar('\n');
-			return (0);
+			if (convert_int(argv[i]) != 0)
+			{
+				add += convert_int(argv[i]);
+			}
+			else
+			{
+				for (j = 0; error[j] != '\0'; j++)
+				{
+					_putchar(error[j]);
+				}
+				_putchar('\n');
+				return (1);
+			}
 		}
-		for (i = 0; error[i] != '\0'; i++)
-		{
-			_putchar(error[i]);
-		}
+		print_number(add);
 		_putchar('\n');
-		return (1);
 		return (0);
 
 	}

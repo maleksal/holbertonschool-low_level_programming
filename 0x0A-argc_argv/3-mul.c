@@ -6,33 +6,22 @@
   * Return: int
   */
 
-int convert_int(char s[])
+int convert_int(char *s)
 {
-	int c, sign, offset, n;
+	unsigned int d = 0;
+	int sign = 1;
 
-	if (s[0] == '-')
+	while (*s)
 	{
-		sign = -1;
+		if (*s == '-')
+			sign = sign * (-1);
+		else
+		{
+			d = (d * 10) + (*s - '0');
+		}
+		s++;
 	}
-	if (sign == -1)
-	{
-		offset = 1;
-	} else
-	{
-		offset = 0;
-	}
-	n = 0;
-
-	for (c = offset; s[c] != '\0'; c++)
-	{
-		n = n * 10 + s[c] - '0';
-	}
-	if (sign == -1)
-	{
-		n = -n;
-	}
-
-	return (n);
+	return (sign * d);
 }
 
 /**
@@ -43,28 +32,17 @@ int convert_int(char s[])
 
 void print_number(int n)
 {
-	if (n / 10 != 0)
-	{
-		print_number(n / 10);
-		if (n > 0)
-		{
-			_putchar((n % 10) + '0');
-		} else
-		{
-			_putchar((-n % 10) + '0');
-		}
-	}
-	else if ((n / 10 == 0) && (n % 10 != 0) && (n > 0))
-	{
-		_putchar((n % 10) + '0');
-	}
-	else if ((n / 10 == 0) && (n % 10 != 0) && (n <= 0))
+	if (n < 0)
 	{
 		_putchar('-');
-		_putchar((-n % 10) + '0');
+		n *= -1;
 	}
+	if (n /10)
+	{
+		print_number(n / 10);
+	}
+	_putchar(n%10 +'0');
 }
-
 
 /**
   * main - mul numbers

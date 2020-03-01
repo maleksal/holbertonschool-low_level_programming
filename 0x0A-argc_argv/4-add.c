@@ -67,10 +67,7 @@ int main(int argc, char *argv[])
 	(void)add;
 	if (argc - 1 <= 1)
 	{
-		for (i = 0; error[i] != '\0'; i++)
-		{
-			_putchar(error[i]);
-		}
+		_putchar(0 + '0');
 		_putchar('\n');
 		return (1);
 	}
@@ -83,8 +80,12 @@ int main(int argc, char *argv[])
 			_putchar('\n');
 			return (0);
 		}
-		_putchar(0 + '0');
+		for (i = 0; error[i] != '\0'; i++)
+		{
+			_putchar(error[i]);
+		}
 		_putchar('\n');
+		return (1);
 		return (0);
 
 	}

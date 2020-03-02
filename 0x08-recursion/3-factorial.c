@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-  * factorial - a tail-recursive function 
+  * factorial - a tail-recursive function
   * that returns a factorial of a givern number
   * -------------------------------------------
   * @n: int type

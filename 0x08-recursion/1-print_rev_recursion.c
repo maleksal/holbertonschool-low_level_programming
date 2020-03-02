@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-  * _print_rev_recursion - a non-tail recursive function 
+  * _print_rev_recursion - a non-tail recursive function
   * that prints an array in reverse
   * -----------------------------------------------------
   * @s: arr

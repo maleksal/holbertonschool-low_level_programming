@@ -3,8 +3,8 @@
 /**
   * create_array - create array and intialized with a char
   * @size: unsigned int
-  * @char: char type
-  * return: char
+  * @c: char type
+  * Return: char
   */
 
 char *create_array(unsigned int size, char c)

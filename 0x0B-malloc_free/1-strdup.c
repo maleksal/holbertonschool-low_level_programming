@@ -14,12 +14,14 @@ char *_strdup(char *str)
 	unsigned int i;
 
 	/* calculate array size */
+	if (str == '\0')
+		return (NULL);
 	for ( ; str[size_arr] != '\0'; size_arr++)
 	;
 	/* locate space in memory */
 	p = malloc(sizeof(char) * size_arr + 1);
 
-	if (p == NULL || str == '\0')
+	if (p == NULL)
 		return (NULL);
 
 	for (i = 0; i <= size_arr; i++)

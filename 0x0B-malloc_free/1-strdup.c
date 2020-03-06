@@ -19,7 +19,7 @@ char *_strdup(char *str)
 	/* locate space in memory */
 	p = malloc(sizeof(char) * size_arr + 1);
 
-	if (p == NULL || str == NULL)
+	if (p == NULL || str == '\0')
 		return (NULL);
 
 	for (i = 0; i <= size_arr; i++)

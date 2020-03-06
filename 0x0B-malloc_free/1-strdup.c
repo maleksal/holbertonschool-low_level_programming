@@ -14,8 +14,8 @@ char *_strdup(char *str)
 	unsigned int i;
 
 	/* calculate array size */
-	for (; str[size_arr] != '\0'; size_arr++);
-
+	for ( ; str[size_arr] != '\0'; size_arr++)
+	;
 	/* locate space in memory */
 	p = malloc(sizeof(char) * size_arr + 1);
 

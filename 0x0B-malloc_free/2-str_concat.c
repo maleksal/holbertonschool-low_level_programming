@@ -13,9 +13,8 @@ int len(char *s)
 {
 	int len = 0;
 
-	for (; *s != '\0'; s++)
-		len++;
-
+	for (; s[len] != '\0'; len++)
+	;
 	return (len);
 }
 
@@ -51,10 +50,11 @@ char *str_concat(char *s1, char *s2)
 	s1 = addr_s1;
 	s2 = addr_s2;
 
-	/* locate space in memory */
+	/* locate space in memory && handle allocation failure */
 	p = malloc(sizeof(char *) * (size_s1 + size_s2) + 1);
 	if (p == NULL)
 		return (NULL);
+
 	/* loop through s1 */
 	for (j = 0; j < size_s1; j++)
 	{
@@ -67,7 +67,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		p[i] = s2[j];
 		i++;
-	}
-	p[i] = '\0';
+	} p[i] = '\0';
 	return (p);
 }

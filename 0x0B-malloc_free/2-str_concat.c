@@ -51,17 +51,12 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	/* loop through s1 */
-	for (j = 0; j < size_s1; j++)
-	{
+	for (j = 0; j < size_s1; j++, i++)
 		p[i] = s1[j];
-		i++;
-	}
 
 	/* loop through s2 and copy the null byte */
-	for (j = 0 ; j <= size_s2; j++)
-	{
+	for (j = 0 ; j < size_s2; j++, i++)
 		p[i] = s2[j];
-		i++;
-	}
+
 	return (p);
 }

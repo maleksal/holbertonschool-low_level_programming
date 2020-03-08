@@ -12,10 +12,14 @@ int **alloc_grid(int width, int height)
 
 	int **array;
 	int c, cc;
-	
+
+	/* check for width and height */
+	if (width <= 0 || height <= 0)
+		return (NULL);
+
 	/* allocate memory for width and height */
 	array = malloc(sizeof(int) * height);
-	
+
 	if (array == NULL)
 		return (NULL);
 

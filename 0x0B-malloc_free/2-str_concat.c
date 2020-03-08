@@ -34,8 +34,6 @@ char *str_concat(char *s1, char *s2)
 	char *p;
 	int i = 0;
 	int j = 0;
-	char *addr_s1 = s1;
-	char *addr_s2 = s2;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -46,9 +44,6 @@ char *str_concat(char *s1, char *s2)
 	/* get length */
 	size_s1 = len(s1);
 	size_s2 = len(s2);
-	/* relocate pointer */
-	s1 = addr_s1;
-	s2 = addr_s2;
 
 	/* locate space in memory && handle allocation failure */
 	p = malloc(sizeof((size_s1 + size_s2) + 1));
@@ -62,12 +57,11 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 
-	/* loop through s2 */
-	for (j = 0 ; j < size_s2; j++)
+	/* loop through s2 and copy the null byte */
+	for (j = 0 ; j <= size_s2; j++)
 	{
 		p[i] = s2[j];
 		i++;
 	}
-	p[i] = '\0';
 	return (p);
 }

@@ -10,41 +10,47 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int size_2_arrays = 1;
+	int size_s1 = 0;
+	int size_s2 = 0;
 	char *p;
+	int i = 0;
+	int j = 0;
 	char *addr_s1 = s1;
 	char *addr_s2 = s2;
-	int i = 0;
 
 	if (s1 == NULL)
 	{
-		s1 = '\0';
+		s1 = "";
+	}else
+	{
+		for (; *s1 != '\0'; s1++)
+			size_s1++;
 	}
 	if (s2 == NULL)
 	{
-		s2 = '\0';
+		s2 = "";
+	} else
+	{
+		for (; *s2 != '\0'; s2++)
+			size_s2++;
 	}
-	/* size s1 */
-	for (; *s1 != '\0'; s1++)
-		size_2_arrays++;
-	/* size s2 */
-	for (; *s2 != '\0'; s2++)
-		size_2_arrays++;
+
 	/* relocate pointer */
 	s1 = addr_s1;
 	s2 = addr_s2;
+	
 	/* locate space in memory */
-	p = malloc(sizeof(char *) * size_2_arrays);
+	p = malloc(sizeof(char *) * (size_s1 + size_s2) + 1);
 	if (p == NULL)
 		return (NULL);
-	for ( ; *s1 != '\0'; s1++)
+	for (j = 0; j < size_s1; j++)
 	{
-		p[i] = *s1;
+		p[i] = s1[j];
 		i++;
 	}
-	for ( ; *s2 != '\0'; s2++)
+	for (j = 0 ; j < size_s2; j++)
 	{
-		p[i] = *s2;
+		p[i] = s2[j];
 		i++;
 	}
 	p[i] = '\0';

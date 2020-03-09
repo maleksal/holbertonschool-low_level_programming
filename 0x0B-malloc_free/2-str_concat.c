@@ -46,7 +46,7 @@ char *str_concat(char *s1, char *s2)
 	size_s2 = len(s2);
 
 	/* locate space in memory && handle allocation failure */
-	p =  (cahr *) malloc((size_s1 + size_s2 + 1));
+	p =  (char *) malloc((size_s1 + size_s2 + 1));
 	if (p == NULL)
 		return (NULL);
 

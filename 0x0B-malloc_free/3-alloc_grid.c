@@ -1,10 +1,11 @@
 #include "holberton.h"
 #include <stdlib.h>
+
 /**
   * alloc_grid - create 2 dimensional array
   * @width: int
   * @height: int
-  * Return : pointer to array
+  * Return: pointer to array
   */
 
 int **alloc_grid(int width, int height)
@@ -32,7 +33,7 @@ int **alloc_grid(int width, int height)
 		{
 			for (cc = 0 ; cc < width; cc++)
 				free(array[cc]);
-		
+
 			free(array);
 			return (NULL);
 		}

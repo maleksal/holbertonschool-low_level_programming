@@ -56,7 +56,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			i++;
 		}
 	}
-	for (i_s2 = 0; i_s2 <= n; i_s2++)
+	for (i_s2 = 0; i_s2 < n; i_s2++)
 	{
 		array[i] = *s2;
 		s2++;

@@ -46,7 +46,7 @@ char *str_concat(char *s1, char *s2)
 	size_s2 = len(s2);
 
 	/* locate space in memory && handle allocation failure */
-	p = malloc(sizeof(char *) * sizeof((size_s1 + size_s2) + 1));
+	p =  malloc((sizeof(char ) * size_s1 + size_s2 + 1));
 	if (p == NULL)
 		return (NULL);
 
@@ -58,5 +58,6 @@ char *str_concat(char *s1, char *s2)
 	for (j = 0 ; j < size_s2; j++, i++)
 		p[i] = s2[j];
 
+	p[i] = '\0';
 	return (p);
 }

@@ -18,22 +18,25 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 
 	/* allocate memory for width and height */
-	array = (int **) malloc(height);
+	array = malloc(sizeof(int *) * height);
 
 	if (array == NULL)
+	{
+		free(array);
 		return (NULL);
-
-	for (c = 0; c <= width; c++)
-		array[c] = (int *) malloc(width);
+	}
+	for (c = 0; c <= height - 1; c++)
+	{
+		array[c] = malloc(sizeof(int) * width);
 		if (array[c] == NULL)
 		{
-			for (cc = 0; cc < c; cc++)
-			{
+			for (cc = 0 ; cc < width; cc++)
 				free(array[cc]);
-				free(array);
-			}
+		
+			free(array);
 			return (NULL);
 		}
+	}
 
 	/* initialize array with zeros */
 

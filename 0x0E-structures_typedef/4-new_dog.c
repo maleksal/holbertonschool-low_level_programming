@@ -3,13 +3,14 @@
 
 #define C
 #define CHECK(p) (p == NULL)
-#define LEN(s) (sizeof(s)/sizeof(s[0]))
+#define LEN(s) (sizeof(s) / sizeof(s[0]))
 
 /**
   * new_dog - create new object for struct
   * @name: array char
   * @age: float
   * @owner: array char
+  * Return: pointer
   */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -24,7 +25,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	/* locate space for name */
 	dog_obj->name = malloc(LEN(name) + 1);
-	
+
 	/* check for failure */
 	if (CHECK(dog_obj->name))
 	{
@@ -33,7 +34,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	dog_obj->owner = malloc(LEN(owner) + 1);
-	
+
 	/* check for failure */
 	if (CHECK(dog_obj->owner))
 	{
@@ -42,7 +43,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	dog_obj->age = age;
-	
+
 	/* assign values */
 	for (c = 0; c < LEN(name); c++)
 		dog_obj->name[c] = name[c];

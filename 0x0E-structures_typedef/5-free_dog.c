@@ -1,5 +1,5 @@
 #include "dog.h"
-
+#include <stdlib.h>
 /**
   * free_dog - free space from memory
   * @d: pointer to struct

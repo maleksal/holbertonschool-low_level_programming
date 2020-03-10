@@ -1,5 +1,8 @@
 #include "dog.h"
 #include <stdlib.h>
+
+#define FREEIF(p) if (p != NULL) free(p)
+
 /**
   * free_dog - free space from memory
   * @d: pointer to struct
@@ -12,6 +15,6 @@ void free_dog(dog_t *d)
 		return;
 
 	free(d);
-	free(d->name);
-	free(d->owner);
+	FREEIF(d->name);
+	FREEIF(d->owner);
 }

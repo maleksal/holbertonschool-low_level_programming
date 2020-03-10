@@ -9,7 +9,7 @@
   * @owner: pointer to array
   */
 
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;

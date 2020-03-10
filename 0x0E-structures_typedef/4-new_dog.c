@@ -46,8 +46,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	/* assign values */
 	for (c = 0; c < LEN(name); c++)
 		dog_obj->name[c] = name[c];
-	for (c = 0; c < LEN(owner); c++)
+	c = 0;
+	for ( ; c < LEN(owner); c++)
 		dog_obj->owner[c] = owner[c];
+	dog_obj->owner[c] = '\0';
 
 	/* return pointer */
 	return (dog_obj);

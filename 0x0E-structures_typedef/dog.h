@@ -9,13 +9,14 @@
   * @owner: pointer to array
   */
 
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-} dog;
+};
 
-typedef struct dog;
-void init_dog(struct dog *d, char *name, float age, char *owner);
+void init_dog(struct dog *, char *, float, char *);
+
+
 #endif

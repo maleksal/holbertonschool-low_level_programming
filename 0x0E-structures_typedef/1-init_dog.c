@@ -1,3 +1,4 @@
+#include "dog.h"
 /**
   * init_dog - initialize struct
   * @d: pointer to struct

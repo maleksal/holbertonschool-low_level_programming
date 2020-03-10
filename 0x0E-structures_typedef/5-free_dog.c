@@ -1,7 +1,7 @@
 #include "dog.h"
 #include <stdlib.h>
 
-#define FREEIF(p) if (p != NULL) free(p)
+#define FREEIF(p) if (p != NULL) free(p) else return;
 
 /**
   * free_dog - free space from memory

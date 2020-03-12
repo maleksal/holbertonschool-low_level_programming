@@ -1,7 +1,7 @@
-#include "function_pointers"
+#include "function_pointers.h"
 #include <stdlib.h>
 
-#define CHECK(a, b) if (a == NULL) return (NULL) if (b == NULL) b = ""
+#define CHECK(a, b) if (a == NULL) return; if (b == NULL) b = ""
 
 
 /**

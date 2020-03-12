@@ -1,3 +1,5 @@
+#include "function_pointers"
+
 /**
   * print_name - print name using function pointer
   * @name: string
@@ -6,5 +8,5 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
+	return (f(name));
 }

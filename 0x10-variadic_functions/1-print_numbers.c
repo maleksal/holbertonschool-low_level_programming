@@ -27,7 +27,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 			/* check for sep and last elem */
 			if (separator && i < n - 1)
-				printf("%s ", separator);
+				printf("%s", separator);
 		}
 
 		/* clear reserved memory for arlist */

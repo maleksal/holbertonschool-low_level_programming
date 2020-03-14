@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-#define/**
+/**
   * print_numbers - print numbers followed by separator and new line
   * @separator: char type
   * @n: int type

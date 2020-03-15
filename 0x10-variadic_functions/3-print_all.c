@@ -45,7 +45,7 @@ void _s(va_list s)
 
 	if (Ptr == NULL)
 		printf("(nil)");
-	
+		return;
 	printf("%s", Ptr);
 }
 

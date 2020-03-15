@@ -72,7 +72,7 @@ void print_all(const char * const format, ...)
 	va_list formatPtr;
 
 	va_start(formatPtr, format);
-	
+
 	while (format && format[i])
 	{
 		b = 0;
@@ -89,7 +89,7 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 	}
-	
+
 	va_end(formatPtr);
 	printf("\n");
 }

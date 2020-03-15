@@ -50,7 +50,10 @@ void _s(va_list s)
 }
 
 
-
+/**
+  * print_all - print variable arguments
+  * @format: array
+  */
 
 void print_all(const char * const format, ...)
 {

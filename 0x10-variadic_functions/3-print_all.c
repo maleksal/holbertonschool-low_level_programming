@@ -44,8 +44,10 @@ void _s(va_list s)
 	char *Ptr = va_arg(s, char *);
 
 	if (Ptr == NULL)
+	{
 		printf("(nil)");
 		return;
+	}
 	printf("%s", Ptr);
 }
 

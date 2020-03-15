@@ -43,12 +43,10 @@ void _s(va_list s)
 {
 	char *Ptr = va_arg(s, char *);
 
-	if (Ptr != NULL)
-	{
-		printf("%s", Ptr);
-	}
-	else
+	if (Ptr == NULL)
 		printf("(nil)");
+	
+	printf("%s", Ptr);
 }
 
 
@@ -57,7 +55,7 @@ void _s(va_list s)
 void print_all(const char * const format, ...)
 {
 
-	unsigned int i = 0, b;
+	unsigned int i = 0, b = 0;
 	/* pointer to function */
 	void (*fp)(va_list);
 	char *separator = "";

@@ -4,6 +4,15 @@
 #include <stdarg.h>
 #include <stdio.h>
 
+
+/**
+  * struct format - struct
+  * @ch: member
+  * @fp: pointer
+  *
+  * Description: struct named arrayF
+  */
+
 typedef struct format
 {
 	char *ch;

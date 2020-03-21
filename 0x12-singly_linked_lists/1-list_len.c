@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
-  * list-len - countes number of elements in a singly linked list
+  * list_len - countes number of elements in a singly linked list
   * @h: pointer
   * Return: type of int
   */

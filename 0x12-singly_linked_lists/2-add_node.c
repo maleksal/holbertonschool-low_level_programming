@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
 /**
@@ -13,7 +14,6 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *temp;
-	int i;
 
 	/* locate memory for temp */
 	temp = (list_t *) malloc(sizeof(list_t));
@@ -29,15 +29,8 @@ list_t *add_node(list_t **head, const char *str)
 		/* check for failure */
 		if (!temp->str)
 			return (NULL);
-		/* copy str */
-		i = 0;
-		while (*str != '\0')
-		{
-			temp->str[i] = *str;
-			str++;
-			i++;
-		}
-		temp->str[i] = '\0';
+		/* duplicate str */
+		temp->str = strdup(str);
 	}
 	/* check if first elem */
 	if (!head)

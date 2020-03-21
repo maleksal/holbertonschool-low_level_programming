@@ -13,11 +13,11 @@ size_t print_list(const list_t *h)
 {
 	int nodes = 0;
 	const list_t *ptr;
-	
+
 	ptr = h;
 
 	/* acess list */
-	
+
 	while (ptr != NULL)
 	{
 		/* check if string is null */
@@ -27,8 +27,8 @@ size_t print_list(const list_t *h)
 		else
 			/* print elem */
 			printf("[%d] %s\n", ptr->len, ptr->str);
-		
-		
+
+
 		nodes++; /* count node */
 		ptr = ptr->next; /* move to next node */
 	}

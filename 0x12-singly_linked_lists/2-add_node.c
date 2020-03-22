@@ -35,6 +35,9 @@ list_t *add_node(list_t **head, const char *str)
 	/* locate memory for temp */
 	temp = (list_t *) malloc(sizeof(list_t));
 
+	if (temp == NULL)
+		return (NULL);
+
 	/* check if string is null */
 	if (str == NULL)
 	{

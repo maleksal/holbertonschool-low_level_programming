@@ -30,18 +30,20 @@ int _strlen(const char *s)
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *temp;
-	int strlen = _strlen(str);
+	int strlen;
 
 	/* locate memory for temp */
 	temp = (list_t *) malloc(sizeof(list_t));
 
 	/* check if string is null */
-	if (!str)
+	if (str == NULL)
 	{
-		temp->str = NULL;
+		temp->next = NULL;
 		temp->len = 0;
 	} else
 	{
+		/* get length */
+		strlen = _strlen(str);
 		/* allocate memory for temp->str */
 		temp->str = malloc(strlen + 1);
 

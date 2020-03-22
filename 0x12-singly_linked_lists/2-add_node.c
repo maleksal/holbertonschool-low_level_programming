@@ -32,6 +32,10 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *temp;
 	int strlen;
 
+	/* check if head is null */
+	if (head == NULL)
+		return (NULL);
+
 	/* locate memory for temp */
 	temp = (list_t *) malloc(sizeof(list_t));
 
@@ -46,6 +50,7 @@ list_t *add_node(list_t **head, const char *str)
 	/* check for failure */
 	if (!temp->str)
 		return (NULL);
+
 	/* duplicate str */
 	temp->str = strdup(str);
 	/* add string length in temp->len */

@@ -44,15 +44,10 @@ list_t *add_node(list_t **head, const char *str)
 
 	/* get length */
 	strlen = _strlen(str);
-	/* allocate memory for temp->str */
-	temp->str = malloc(strlen + 1);
-
-	/* check for failure */
-	if (temp->str == NULL)
-		return (NULL);
 
 	/* duplicate str */
 	temp->str = strdup(str);
+
 	/* add string length in temp->len */
 	temp->len = strlen;
 

@@ -38,27 +38,19 @@ list_t *add_node(list_t **head, const char *str)
 	if (temp == NULL)
 		return (NULL);
 
-	/* check if string is null */
-	if (str == NULL)
-	{
-		temp->next = NULL;
-		temp->len = 0;
-	} else
-	{
-		/* get length */
-		strlen = _strlen(str);
-		/* allocate memory for temp->str */
-		temp->str = malloc(strlen + 1);
+	/* get length */
+	strlen = _strlen(str);
+	/* allocate memory for temp->str */
+	temp->str = malloc(strlen + 1);
 
-		/* check for failure */
-		if (!temp->str)
-			return (NULL);
-		/* duplicate str */
-		temp->str = strdup(str);
-		/* add string length in temp->len */
-		temp->len = strlen;
+	/* check for failure */
+	if (!temp->str)
+		return (NULL);
+	/* duplicate str */
+	temp->str = strdup(str);
+	/* add string length in temp->len */
+	temp->len = strlen;
 
-	}
 	/* check if first elem */
 	if (!head)
 		*head = temp;

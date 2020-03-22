@@ -48,7 +48,7 @@ list_t *add_node(list_t **head, const char *str)
 	temp->str = malloc(strlen + 1);
 
 	/* check for failure */
-	if (!temp->str)
+	if (temp->str == NULL)
 		return (NULL);
 
 	/* duplicate str */
@@ -56,7 +56,6 @@ list_t *add_node(list_t **head, const char *str)
 	/* add string length in temp->len */
 	temp->len = strlen;
 
-	/* check if first elem */
 	temp->next = *head;
 	*head = temp;
 

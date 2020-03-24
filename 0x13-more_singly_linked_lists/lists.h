@@ -5,6 +5,15 @@
 #include <stdlib.h>
 #include <stddef.h>
 
+/**
+ * struct Node - singly linked list
+ * @n: integer
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ * for Holberton project
+ */
+
 typedef struct Node
 {
 	int n;

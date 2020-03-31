@@ -14,7 +14,7 @@
 
 int cp_function(char *from, char *to)
 {
-	int fd, fd_to, dr;
+	int fd, fd_to, cl_from, cl_to;
 	int R, W;
 	char *buf[1024];
 
@@ -40,17 +40,12 @@ int cp_function(char *from, char *to)
 			return (98);
 	}
 
-	dr = close(fd);
-	if (dr < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		return (100);
-	}
+	cl_drom = close(fd);
+	cl_to = close(fd_to);
 
-	dr = close(fd_to);
-	if (dr < 0)
+	if (cl_from < 0 || cl_to < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", -1);
 		return (100);
 	}
 	return (0);

@@ -75,7 +75,7 @@ int main(int argc, char **argv)
 	{
 		case(99):
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(98);
+			exit(99);
 
 		case(98):
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);

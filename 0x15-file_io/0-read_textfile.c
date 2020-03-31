@@ -1,14 +1,16 @@
 #include "holberton.h"
 
 /**
-  *
-  *
+  * read_textfile - print from file to stdout
+  * @filename: pointer
+  * @letters: int
+  * Return: int
   */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd, wr, re;
-	char * buffer;
+	char *buffer;
 
 	/* check for null */
 	if (filename == NULL)
@@ -17,7 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(sizeof(letters));
 	if (!buffer)
 		return (0);
-	
+
 	/* open file & check for failure */
 	fd = open(filename, O_RDONLY);
 	CHECK_CALL(fd);

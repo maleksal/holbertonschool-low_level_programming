@@ -74,7 +74,7 @@ int main(int argc, char **argv)
 	switch (_return)
 	{
 		case(99):
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(98);
 
 		case(98):

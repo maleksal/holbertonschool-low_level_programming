@@ -16,7 +16,7 @@ int cp_function(char *from, char *to)
 {
 	int fd, fd_to, cl_from, cl_to;
 	int R, W;
-	char *buf[1024];
+	char buf[1024];
 
 	fd_to = open(to, O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fd_to < 0)

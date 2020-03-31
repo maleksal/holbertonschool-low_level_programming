@@ -40,7 +40,7 @@ int cp_function(char *from, char *to)
 			return (98);
 	}
 
-	cl_drom = close(fd);
+	cl_from = close(fd);
 	cl_to = close(fd_to);
 
 	if (cl_from < 0 || cl_to < 0)

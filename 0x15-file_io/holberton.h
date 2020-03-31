@@ -1,9 +1,6 @@
 #ifndef H
 #define H
 
-
-#define CHECK_CALL(F) { if (F < 0) return (0); }
-
 #include <unistd.h>
 #include <stdio.h>
 #include <stdio.h>

@@ -22,13 +22,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	/* open file & check for failure */
 	fd = open(filename, O_RDONLY);
-	CHECK_CALL(fd);
+	if (fd < 0)
+		return (0);
 
 	re = read(fd, buffer, letters);
-	CHECK_CALL(re);
+	if (re < 0)
+		return (0);
 
 	wr = write(STDOUT_FILENO, buffer, re);
-	CHECK_CALL(wr);
+	if (wr < 0 || wr != re)
+		return (0);
 
 	return (wr);
 

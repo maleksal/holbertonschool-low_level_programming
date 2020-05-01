@@ -11,20 +11,21 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	dlistint_t *node = head;
+	const dlistint_t *node = h;
 	int count = 0;
 
 	if (!h)
 	{
 		return (0);
 	}
-	while (node->next)
+	
+	while (node)
 	{
-		printf(node->n);
+		printf("%d\n", node->n);
 		node = node->next;
 		count++;
 	}
 
-	return (count)
+	return (count);
 
 }

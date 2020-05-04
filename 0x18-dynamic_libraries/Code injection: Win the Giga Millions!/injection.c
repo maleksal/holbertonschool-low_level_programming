@@ -5,6 +5,6 @@
 int atoi(const char *nptr){
 	(void) nptr;
 
-	write(1, "Congratulations, you win the Jackpot!\n", 38);
+	write(1, "49 24 72 15 51 - 7\nCongratulations, you win the Jackpot!\n", 57);
 	exit(0);
 }

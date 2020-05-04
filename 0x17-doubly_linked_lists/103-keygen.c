@@ -20,7 +20,8 @@ int part_6(char);
 
 int main(int ac, char *argv[])
 {
-	char letters[] = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
+	char letters[64] = "A-CHRDw87lNS0E9B2TibgpnMVy";
+	char *data = "s5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
 	char *username;
 	char *output;
 
@@ -28,12 +29,17 @@ int main(int ac, char *argv[])
 	int p;
 
 	(void) ac;
+	/* handle betty line continuation */
+	strcat(letters, data);
+
 	output = malloc(sizeof(char) * 6);
 	if (!output || ac != 2)
 		return (-1);
 
 	username = argv[1];
 	lenght = strlen(username);
+
+	/* handle keys */
 	p = part_1(lenght);
 	strncat(output, &letters[p], 1);
 
@@ -51,6 +57,7 @@ int main(int ac, char *argv[])
 
 	p = part_6(username[0]);
 	strncat(output, &letters[p], 1);
+
 	printf("%s\n", output);
 
 	return (0);

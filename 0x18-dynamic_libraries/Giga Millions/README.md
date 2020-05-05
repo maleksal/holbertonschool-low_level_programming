@@ -2,6 +2,14 @@
 
 Overriding the ```atoi``` function and inject it usnig LD_PRELOAD, so when it reach the ```call sym.imp.atoi``` it whill print the desired output .
 
+the injection outputs this message in order to pass the checker sepecific test case, (hack)
+```terminal
+user@user-hoberton:~/ ./gm 1 2 3 4 5 6
+"9 8 10 24 75 - 9
+Congratulations, you win the Jackpot!"
+user@user-hoberton:~/
+```
+
 ```r2
 │           0x00400bc7      837dac07       cmp dword [var_54h], 7
 │       ┌─< 0x00400bcb      741e           je 0x400beb

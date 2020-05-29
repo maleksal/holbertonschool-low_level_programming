@@ -24,7 +24,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	newElement->key = (char *)key;
 	newElement->value = strdup(value);
-
+	if (newElement->value == NULL)
+	{
+		free(newElement);
+		return (0);
+	}
 	/* hash key and get index */
 	tableIndex = key_index((const unsigned char *)key, ht->size);
 

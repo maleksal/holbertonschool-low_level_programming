@@ -5,7 +5,7 @@
  * @ht: hash table
  * @key: const char *
  * @value: const char *
- * Return: 0 if success, 1 if fail
+ * Return: 1 if success, 0 if fail
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
@@ -15,12 +15,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int tableIndex;
 
 	if (!key || !*key || !ht)
-		return (1);
+		return (0);
 
 	/* create node */
 	newElement = malloc(sizeof(hash_node_t));
 	if (!newElement)
-		return (1);
+		return (0);
 
 	newElement->key = (char *)key;
 	newElement->value = strdup(value);
@@ -37,5 +37,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		pointer->next = newElement;
 	}
 	ht->array[tableIndex] = newElement;
-	return (0);
+	return (1);
 }

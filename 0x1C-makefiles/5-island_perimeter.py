@@ -30,5 +30,6 @@ def island_perimeter(grid):
                     if left_square_side == 1:
                         peremiter -= 2
             left_square_side = cell[elem]
+        left_square_side = 0
         previous_cell = cell
     return peremiter

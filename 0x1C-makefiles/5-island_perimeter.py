@@ -13,7 +13,7 @@ def island_perimeter(grid):
         returns the perimeter
 
     """
-    if not grid or len(grid) == 0:
+    if not grid or len(grid) == 0 or len(grid[0]) == 0:
         return 0
 
     previous_cell = None

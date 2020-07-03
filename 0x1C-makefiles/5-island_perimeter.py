@@ -13,23 +13,17 @@ def island_perimeter(grid):
         returns the perimeter
 
     """
-    if not grid or len(grid) == 0 or len(grid[0]) == 0:
-        return 0
-
     previous_cell = None
-    left_square_side = 0
     peremiter = 0
 
     for cell in grid:
-        for elem in range(len(cell)):
-            if cell[elem] == 1:
+        for elem_index in range(len(cell)):
+            if cell[elem_index] == 1:
                 peremiter += 4
-                if elem > 0:
-                    if previous_cell and previous_cell[elem] == 1:
+                if elem_index > 0:
+                    if cell[elem_index - 1]:
                         peremiter -= 2
-                    if left_square_side == 1:
+                    if previous_cell and previous_cell[elem_index]:
                         peremiter -= 2
-            left_square_side = cell[elem]
-        left_square_side = 0
         previous_cell = cell
     return peremiter

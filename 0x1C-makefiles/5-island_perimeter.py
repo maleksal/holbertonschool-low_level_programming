@@ -19,12 +19,13 @@ def island_perimeter(grid):
     peremiter = 0
 
     for cell in grid:
-        for elem in range(len(cell)):
-            if cell[elem] == 1:
+        for idx, elem in enumerate(cell):
+            if elem == 1:
                 peremiter += 4
-                if previous_cell:
-                    peremiter -= 2 * previous_cell[elem]
-                peremiter -= 2 * left_square_side
+                if idx > 0:
+                    if previous_cell:
+                        peremiter -= 2 * previous_cell[elem]
+                    peremiter -= 2 * left_square_side
             left_square_side = cell[elem]
         previous_cell = cell
     return peremiter

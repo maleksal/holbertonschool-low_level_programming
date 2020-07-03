@@ -23,7 +23,8 @@ def island_perimeter(grid):
             if cell[elem] == 1:
                 peremiter += 4
                 if previous_cell:
-                    peremiter -= 2 * (left_square_side + previous_cell[elem])
+                    peremiter -= 2 * previous_cell[elem]
+                peremiter -= 2 * left_square_side
             left_square_side = cell[elem]
         previous_cell = cell
     return peremiter

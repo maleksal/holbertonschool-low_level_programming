@@ -20,10 +20,9 @@ def island_perimeter(grid):
         for elem_index in range(len(cell)):
             if cell[elem_index] == 1:
                 peremiter += 4
-                if elem_index > 0:
-                    if cell[elem_index - 1]:
-                        peremiter -= 2
-                    if previous_cell and previous_cell[elem_index]:
-                        peremiter -= 2
+                if elem_index and cell[elem_index - 1]:
+                    peremiter -= 2
+                if previous_cell and previous_cell[elem_index]:
+                    peremiter -= 2
         previous_cell = cell
     return peremiter
